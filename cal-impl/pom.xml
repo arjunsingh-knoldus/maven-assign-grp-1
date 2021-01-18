@@ -24,6 +24,7 @@
 
   <build>
     <plugins>
+      <!-- Creating One jar with all depencies -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -42,6 +43,8 @@
               <descriptorRefs>
                 <descriptorRef>jar-with-dependencies</descriptorRef>
               </descriptorRefs>
+              <finalName>${project.artifactId}-${project.version}-full</finalName>
+              <appendAssemblyId>false</appendAssemblyId>
             </configuration>
           </execution>
         </executions>
